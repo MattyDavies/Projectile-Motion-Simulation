@@ -67,3 +67,6 @@ while True:
     manager.update(time_delta)
     manager.draw_ui(screen)
     pygame.display.update()
+
+
+#menu loop
