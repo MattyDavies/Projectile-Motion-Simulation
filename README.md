@@ -6,11 +6,20 @@ The Projectile Motion Simulation (PMS) has been designed as part of a project fo
 currently the porject will be able to shoot a small ball out fromn a cannon, and you will be able to see how much motion and force was required to create
 that motion.
 
-## Table of Contence
+## Table of Contents
   - Features
   - Getting Started
     - Installation
     - Prerequisites
   - Usage
   - Contributing
-  - License  
+  - License
+
+## Features
+ - Physics simulation containing a cannon that shoots a projectile (ball) at a specific angle and velocity
+ - Interactive side menu with adjustable variables such as:
+    - Launch velocity
+    - Angle of launch
+    - Gravitational field strength
+
+## Getting Started
