@@ -70,3 +70,16 @@ while True:
 
 
 #menu loop
+
+while menu == True:
+    time_delta = clock.tick(144)/1000.0
+    for event in pygame.event.get():
+        if event.type == event.QUIT or (event.type == KEYDOWN and event.key == K_Escape):
+            pygame.quit()
+            exit()\
+        if event.type == VIDEORESIZE:
+            screenSize = (event.w.event.h)
+            menuSize = (screenSize[0]-simSize[0],event.h)
+            simSize = (math.floor(screenSize[0]*3/4), screenSize[1])
+            screen = pygame.display.set.mode((event.w, event.h),pygame.RESIZABLE)
+                
