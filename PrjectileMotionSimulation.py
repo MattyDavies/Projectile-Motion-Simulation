@@ -51,3 +51,19 @@ vel_arrow_color = [255,255,255,255]
 grav_arrow_color = [255,255,255,255]
 
 font = pygame.font.SysFont("timesnewroman", 20)
+
+while True:
+    time_delta = clock.tick(144)/1000.0
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT or (event.type == KEYDOWN and event.key == K_ESCAPE):
+            pygame.quit()
+            exit()
+        if event.type == VIDEORESIZE:
+            screenSize = (event.w,event.h)
+            menuSize = (screenSize[0]-simSize[0],event.h)
+            simSize = (math.floor(screenSize[0]*3/4), screenSize[1])
+            screen = pygame.display.set_mode((event.w, event.h), pygame.RESIZABLE)
+            
+    manager.update(time_delta)
+    manager.draw_ui(screen)
+    pygame.display.update()
